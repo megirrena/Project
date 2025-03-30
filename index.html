@@ -32,10 +32,10 @@
       </div>
     </nav>
     <div class="main">
-      <div class="main_container">
-        <div class="main_content">
+      <div class="first_container">
+        <div class="first_content">
           <h1>What Is The Best Time To Reach You?</h1>
-          <select id="time-select">
+          <select id="time-select" >
             <option>Choose Your Time</option>
             <option>8 AM CST</option>
             <option>9 AM CST</option>
@@ -49,13 +49,33 @@
             <option>5 PM CST</option>
           </select>
           <p class="time_text">(All times are in CST)</p>
-          <button class="main__btn">
+          <button class="button">
             CONTINUE <i class="fa-solid fa-angle-right"></i>
           </button>
         </div>
       </div>
-    </div>
 
+      <div class="second_container">
+        <div class="second_content"></div>
+          <h1>Add Your Personal Details</h1>
+            <form>
+            <input type="text" placeholder="First name" required>
+            <input type="text" placeholder="Last name" required>
+            <input type="email" placeholder="Email" required>
+            <input type="tel" placeholder="Phone Number" required>
+            <button class="button" type="submit">SUBMIT YOUR DETAILS <i class="fa-solid fa-angle-right"></i></button>
+        </form>
+      </div>
+      <div class="collected_container">
+        <h1> Collected Data</h1>
+        <p> Suitable Time:<span id="display-time"></span></p>
+        <p> First Name: <span id="display-firstName"></span></p>
+        <p> Last Name: <span id="display-lastName"></span></p>
+        <p> Email: <span id="display-email"></span></p>
+        <p> Phone: <span id="display-phone"></span></p>
+      </div>
+      
+    </div>
     <footer>
       <div class="footer_links">
         <a href="#">Terms and Conditions</a> | <a href="#">Privacy Policy</a> |
@@ -100,5 +120,7 @@
         </div>
       </div>
     </footer>
+        <script src="app.js"></script>
+
   </body>
 </html>
