@@ -35,8 +35,8 @@
       <div class="first_container">
         <div class="first_content">
           <h1>What Is The Best Time To Reach You?</h1>
-          <select id="time-select" >
-            <option>Choose Your Time</option>
+          <select id="time-select" required>
+            <option value="" disabled selected>Choose Your Time</option>
             <option>8 AM CST</option>
             <option>9 AM CST</option>
             <option>10 AM CST</option>
@@ -65,6 +65,13 @@
             <input type="tel" placeholder="Phone Number" required>
             <button class="button" type="submit">SUBMIT YOUR DETAILS <i class="fa-solid fa-angle-right"></i></button>
         </form>
+        <div class="checkbox-container">
+          <input type="checkbox" id="agree" required>
+          <label for="agree" class="checkbox-text">
+            I agree to the Terms and Conditions.
+          </label>
+        </div>
+
       </div>
       <div class="collected_container">
         <h1> Collected Data</h1>

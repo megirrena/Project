@@ -7,6 +7,10 @@ const email = document.querySelector('input[placeholder="Email"]');
 const phone = document.querySelector('input[placeholder="Phone Number"]');
 
 continueButton.addEventListener("click", () => {
+  if (!timeSelect.value) {
+    alert("Please select a time");
+    return;
+  }
   const selectedTime = timeSelect.value;
 
   localStorage.setItem("selectedTime", selectedTime);
@@ -15,13 +19,23 @@ continueButton.addEventListener("click", () => {
 });
 
 submitButton.addEventListener("click", (event) => {
-  event.preventDefault();
-
   const firstInput = firstName.value;
   const secondInput = lastName.value;
   const emailInput = email.value;
   const phoneInput = phone.value;
   const selectedTime = localStorage.getItem("selectedTime") || "Not selected";
+  const agreeCheckbox = document.getElementById("agree");
+  if (
+    firstInput.trim() === "" ||
+    secondInput.trim() === "" ||
+    emailInput.trim() === "" ||
+    phoneInput.trim() === "" ||
+    !agreeCheckbox.checked
+  ) {
+    alert("All fields are required and the checkbox must be checked");
+    return;
+  }
+  event.preventDefault();
 
   document.querySelector(".second_container").style.display = "none";
   document.querySelector(".collected_container").style.display = "block";
